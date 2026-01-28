@@ -342,15 +342,20 @@
     }
 
     function pageSad() {
-      render(`
-        <p class="emoji">😢</p>
-        <p>Are you sure? This is me if you say no…</p>
-        <div class="buttons">
-          <button class="yes" onclick="pageAsk()">I’m not sure</button>
-          <button class="no runaway" onmouseover="runAway(this)">I’m sure</button>
-        </div>
-      `);
-    }
+  render(`
+    <p class="emoji">😢</p>
+    <p>Are you sure? This is me if you say no…</p>
+    <div class="buttons">
+      <button class="yes" onclick="pageAsk()">I’m not sure</button>
+      <button class="no runaway" 
+        onmouseover="runAway(this)" 
+        ontouchstart="runAway(this)" 
+        onclick="runAway(this)">
+        I’m sure
+      </button>
+    </div>
+  `);
+}
 
     function pageYes() {
       render(`
